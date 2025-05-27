@@ -22,24 +22,34 @@ body{
     flex: 1;
 }
 
-.hello{
+.reset-button{
     align-self: center;
 }
 
+#reset-button{
+    font-size: 28px;
+}
+
 .grid-container{
-    display: flexbox;
-    border: 1px black solid;
-}
-
-.cellRow{
     display: flex;
+    flex-direction: column;
+    border: 1px black solid;
     justify-content: center;
+    align-self: center;
+    align-content: center;
+    width: 1000px;
+    height: 1000px
 }
 
-.divCell{
+.gridRow{
+    display:flex;
+    flex: 1;
+}
+
+.gridCell{
+    flex: 1;
     border: 1px black solid;
-    padding: 10px;
-    background-color: blue;
+    background-color: rgb(119, 119, 119);
 }
 
 .footer{
