@@ -1,0 +1,48 @@
+*{
+    font-family: Roboto;
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.main-content{
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.hello{
+    align-self: center;
+}
+
+.grid-container{
+    display: flexbox;
+    border: 1px black solid;
+}
+
+.cellRow{
+    display: flex;
+    justify-content: center;
+}
+
+.divCell{
+    border: 1px black solid;
+    padding: 10px;
+    background-color: blue;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+}
