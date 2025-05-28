@@ -17,23 +17,24 @@ function createGrid() {
         var cellRows = document.createElement("div");
         cellRows.className = "gridRow";
         for (var j = 0; j < getRows; j++) {
-            var divCell = document.createElement("div");
-            divCell.className = "gridCell";
+            var gridCell = document.createElement("div");
+            gridCell.className = "gridCell";
 
-
-
-            divCell.addEventListener("mouseover", (e) => {
-            
+            gridCell.addEventListener("mouseover", (e) => {
                 e.target.style.backgroundColor = `${getRandomColor()}`
+                let currentOpacity = parseFloat(e.target.style.opacity);
+                if(isNaN(currentOpacity)) currentOpacity = 1;
+                let newOpacity = currentOpacity - 0.1;
+                if(newOpacity < 0) newOpacity = 0;
+                e.target.style.opacity = newOpacity;
             })
 
-            
-
-            cellRows.appendChild(divCell);
+            cellRows.appendChild(gridCell);
         }
         gridContainer.appendChild(cellRows);
     }
 }
+
 
 createGrid()
 
